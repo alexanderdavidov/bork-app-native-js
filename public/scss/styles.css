@@ -1,0 +1,151 @@
+* {
+  font-family: 'Roboto', sans-serif; }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.borkapp, .borkapp .borkapp__signin .borkapp__contentwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__tel, .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__password, .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__submit {
+  height: 40px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  margin: 10px 0;
+  font-size: 12px;
+  padding: 6px;
+  text-align: center;
+  outline: none; }
+  @media (min-width: 1000px) {
+    .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__tel, .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__password, .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__submit {
+      height: 50px;
+      font-size: 16px;
+      padding: 10px; } }
+
+.borkapp .borkapp__signin .borkapp__back, .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__wrapperbottom .borkapp-contentwrapper-wrapperbottom__save, .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__wrapperbottom .borkapp-contentwrapper-wrapperbottom__forgotpassword {
+  color: white;
+  font-size: 12px;
+  font-weight: 300; }
+  @media (min-width: 1000px) {
+    .borkapp .borkapp__signin .borkapp__back, .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__wrapperbottom .borkapp-contentwrapper-wrapperbottom__save, .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__wrapperbottom .borkapp-contentwrapper-wrapperbottom__forgotpassword {
+      font-size: 14px; } }
+
+.borkapp {
+  background-image: url("./images/purple-sunset.png");
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .borkapp .borkapp__signin {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    width: 80vw;
+    padding: 30px; }
+    @media (min-width: 1000px) {
+      .borkapp .borkapp__signin {
+        width: 50vw; } }
+    .borkapp .borkapp__signin .borkapp__back {
+      text-decoration: none; }
+    .borkapp .borkapp__signin .borkapp__contentwrapper {
+      flex-direction: column;
+      width: 100%; }
+      .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__rabbit {
+        width: 60px;
+        display: block;
+        margin: 10px 0 20px 0; }
+        @media (min-width: 1000px) {
+          .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__rabbit {
+            width: 80px; } }
+      .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__tel {
+        width: 100%;
+        background-color: white;
+        border: 1px solid white;
+        color: black; }
+        @media (min-width: 1000px) {
+          .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__tel {
+            width: 60%; } }
+      .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__tel::placeholder {
+        color: rgba(0, 0, 0, 0.4); }
+      .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__tel:valid {
+        color: white;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2); }
+      .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__tel:invalid:not(:placeholder-shown) {
+        color: #b40000;
+        background-color: transparent; }
+      .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__password {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white; }
+        @media (min-width: 1000px) {
+          .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__password {
+            width: 60%; } }
+      .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__password:valid:not(:placeholder-shown) {
+        background-color: transparent; }
+      .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__password:invalid:not(:placeholder-shown) {
+        background-color: white;
+        color: black; }
+      .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__password::placeholder {
+        color: rgba(255, 255, 255, 0.4); }
+      .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__submit {
+        width: 70%;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        color: white; }
+        @media (min-width: 1000px) {
+          .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__submit {
+            width: 30%; } }
+      .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__wrapperbottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 10px 0; }
+        @media (min-width: 1000px) {
+          .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__wrapperbottom {
+            width: 55%; } }
+        .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__wrapperbottom .borkapp-contentwrapper-wrapperbottom__save {
+          text-decoration: none; }
+        .borkapp .borkapp__signin .borkapp__contentwrapper .borkapp-contentwrapper__wrapperbottom .borkapp-contentwrapper-wrapperbottom__forgotpassword {
+          text-decoration: none; }
+
+/*# sourceMappingURL=styles.css.map */

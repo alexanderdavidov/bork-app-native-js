@@ -1,0 +1,169 @@
+@import './reset/reset';
+
+$white: rgb(255,255,255);
+$black: rgb(0,0,0);
+$whitePointTwo: rgba(255,255,255,0.2);
+
+%flexboxCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%inputs-shared {
+  height: 40px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  margin: 10px 0;
+  font-size: 12px;
+  padding: 6px;
+  text-align: center;
+  outline: none;
+  @media (min-width: 1000px) {
+    height: 50px;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+%button-snippet {
+  color: $white;
+  font-size: 12px;
+  font-weight: 300;
+  @media (min-width: 1000px) {
+    font-size: 14px;
+  }
+}
+
+.borkapp {
+  background-image: url("./images/purple-sunset.png");
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @extend %flexboxCenter;
+
+  .borkapp__signin {
+    background-color: rgba(255,255,255,0.1);
+    box-sizing: border-box;
+    width: 80vw;
+    @media (min-width: 1000px) {
+      width: 50vw;
+    }
+    padding: 30px;
+    .borkapp__back {
+      text-decoration: none;
+      @extend %button-snippet;
+    }
+
+    .borkapp__contentwrapper {
+      @extend %flexboxCenter;
+      flex-direction: column;
+      width: 100%;
+
+      .borkapp-contentwrapper__rabbit {
+        width: 60px;
+        @media (min-width: 1000px) {
+          width: 80px;
+        }
+        display: block;
+        margin: 10px 0 20px 0;
+      }
+
+
+      .borkapp-contentwrapper__tel {
+        @extend %inputs-shared;
+        width: 100%;
+        @media (min-width: 1000px) {
+          width: 60%;
+        }
+        background-color: $white;
+        border: 1px solid $white;
+        color: $black;
+      }
+
+      .borkapp-contentwrapper__tel::placeholder {
+        color: rgba(0,0,0,0.4);
+      }
+
+      .borkapp-contentwrapper__tel:valid {
+        color: $white;
+        background-color: transparent;
+        border: 1px solid $whitePointTwo;
+      }
+
+      .borkapp-contentwrapper__tel:invalid:not(:placeholder-shown) {
+        color: rgb(180,0,0);
+        background-color: transparent;
+      }
+
+      .borkapp-contentwrapper__password {
+        @extend %inputs-shared;
+        width: 100%;
+        @media (min-width: 1000px) {
+          width: 60%;
+        }
+        background-color: transparent;
+        border: 1px solid $whitePointTwo;
+        color: $white;
+      }
+
+      .borkapp-contentwrapper__password:valid:not(:placeholder-shown) {
+        background-color: transparent;
+      }
+
+      .borkapp-contentwrapper__password:invalid:not(:placeholder-shown) {
+        background-color: $white;
+        color: $black;
+      }
+
+      .borkapp-contentwrapper__password::placeholder {
+        color: rgba(255,255,255,0.4);
+      }
+
+      .borkapp-contentwrapper__submit {
+        @extend %inputs-shared;
+        width: 70%;
+        @media (min-width: 1000px) {
+          width: 30%;
+        }
+        background-color: transparent;
+        border: 1px solid $whitePointTwo;
+        cursor: pointer;
+        color: $white;
+      }
+
+      .borkapp-contentwrapper__submitactive {
+        @extend %inputs-shared;
+        width: 70%;
+        @media (min-width: 1000px) {
+          width: 30%;
+        }
+        background-color: $white;
+        border: 1px solid $white;
+        cursor: pointer;
+        color: $black;
+      }
+
+      .borkapp-contentwrapper__wrapperbottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        @media (min-width: 1000px) {
+          width: 55%;
+        }
+        margin: 10px 0;
+        .borkapp-contentwrapper-wrapperbottom__save {
+          text-decoration: none;
+          @extend %button-snippet;
+        }
+        .borkapp-contentwrapper-wrapperbottom__forgotpassword {
+          text-decoration: none;
+          @extend %button-snippet;
+        }
+      }
+    }
+  }
+}
