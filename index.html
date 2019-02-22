@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+  <title>Bork App</title>
+</head>
+<body>
+  <main class='borkapp'>
+    <form class='borkapp__signin' action="#" post="/bork-app-native-js" autocomplete="off">
+      <a class='borkapp__back' href="/bork-app-native-js">назад</a>
+      <div class='borkapp__contentwrapper borkapp-contentwrapper'>
+        <img class='borkapp-contentwrapper__rabbit' src="./images/maxresdefault.png" alt="rabbit"/>
+        <input class='borkapp-contentwrapper__tel'
+               pattern='[0-9]{11}'
+               title='Введите 11 цифр'
+               name='tel'
+               placeholder="Номер телефона"
+               type="tel" required>
+        <input class='borkapp-contentwrapper__password'
+               minlength='5'
+               name='password'
+               placeholder="Пароль"
+               type="password" required>
+        <div class='borkapp-contentwrapper__wrapperbottom borkapp-contentwrapper-wrapperbottom'>
+          <a class='borkapp-contentwrapper-wrapperbottom__save' href="/bork-app-native-js">Запомнить</a>
+          <a class='borkapp-contentwrapper-wrapperbottom__forgotpassword' href="/bork-app-native-js">Забыл пароль</a>
+        </div>
+        <input class='borkapp-contentwrapper__submit'
+               value='Войти'
+               type="submit">
+      </div>
+    </form>
+  </main>
+  <script src="./main.js"></script>
+  <noscript>Please enable JavaScript.</noscript>
+</body>
+</html>
